@@ -19,8 +19,8 @@ filterwarnings = [
     "default::DeprecationWarning:__main__",
     "ignore::DeprecationWarning",
     "ignore::PendingDeprecationWarning",
-    "ignore::ImportWarning",
-    "ignore::ResourceWarning",
+#    "ignore::ImportWarning",
+#    "ignore::ResourceWarning",
 
 #    'ignore::DeprecationWarning:omero.*:',
 #    'ignore::DeprecationWarning:omero_ext.*:',
@@ -40,9 +40,9 @@ filterwarnings = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8 <=3.11"
+python = ">=3.8.10 <=3.11"
 #microscopemetrics = "0.2.2"
-microscopemetrics = {git = "https://github.com/juliomateoslangerak/microscope-metrics.git", branch = "main"}
+microscopemetrics = {git = "https://github.com/juliomateoslangerak/microscope-metrics.git", branch = "dev"}
 omero-py = "^5"
 pyyaml = "^6"
 
@@ -54,10 +54,11 @@ ezomero = "^1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23"
+pre-commit = "^3"
 poetry = "^1"
 isort = "^5"
 
 [build-system]
-requires = ["poetry-core=1.7.0"]
+requires = ["poetry-core>=1.7.0"]
 build-backend = "poetry.core.masonry.api"
 
