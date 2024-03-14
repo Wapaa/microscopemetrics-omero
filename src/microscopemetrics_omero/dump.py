@@ -98,7 +98,7 @@ def dump_roi(
         )
         return None
 
-    shapes = [SHAPE_TO_FUNCTION[type(shape)](shape) for shape in roi.shapes]
+    shapes = [SHAPE_TO_FUNCTION[type(shape[1])](shape[1]) for shape in roi.shapes.items()]
 
     return omero_tools.create_roi(
         conn=conn,
